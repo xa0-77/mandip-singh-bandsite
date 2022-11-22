@@ -1,0 +1,45 @@
+
+@use './variables' as *;
+
+// add the font mixins like page header, section header, etc. 
+
+// make sure to convert all px to rems
+
+// mobile text styles
+// @mixin page-header {
+//     font-size: 24px;
+//     line-height: 32px;
+//     font-weight: bold;
+// }
+
+@mixin section-header {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+}
+
+@mixin subheader {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+@mixin body-copy {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: normal;
+}
+
+// add mixins for media queries
+
+@mixin tablet {
+    @media (min-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-width) {
+        @content;
+    }
+}
