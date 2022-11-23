@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./styles/bio.css">
@@ -10,30 +12,38 @@
 </head>
 
 <body>
+    
+   
 
-    <header>
+    <header class="header">
+        <div class="logo-container">
+            <!-- <p class="logo">BANDSITE</p> -->
+            <img src="./assets/logos/logo-bandsite.svg" class="logo" alt="bandsite logo">
+        </div>
 
          <!-- this is the logo...insert logo from assets folder -->
-         <div>
-            <img src="./assets/Logo/Logo-bandsite.svg" class="logo" alt="bandsite logo">
-        </div>
+        
         <nav>
-            <a href="#">Biography</a>
-            <a href="#">Shows</a>
+            <a href="#" class="header__nav-link">Biography</a>
+            <a href="#" class="header__nav-link">Shows</a>
         </nav>
 
        
     </header>
     <!-- hero -->
     <div>
+        <div class="hero">
+            <h1>The Bees Knees</h1>
+        </div>
         <!-- insert bg img -->
-        <h1>The Bees Knees</h1>
+        
     </div>
     <main>
         <h2>About the Musicians</h2>
 
-        <img src="./assets/Images/band.jpg" alt="a photo of The Bees Knees performing at a concert">
-
+        <div class="img-container">
+        <img src="./assets/images/band.jpg" class="img" alt="a photo of The Bees Knees performing at a concert">
+    </div>
         <section>
             <blockquote>
                 <p>“We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better,
@@ -64,42 +74,64 @@
         <section>
             <h2>Photo Gallery</h2>
 
-            <img src="./assets/Images/Photo-gallery-1.jpg"
-                alt="fans at the concert and bright pinkish-orange lights and theatrical smoke on stage">
-            <img src="./assets/Images/Photo-gallery-2.jpg"
+            <div class="img-container">
+            <img src="./assets/images/Photo-gallery-1.jpg" class="img" 
+                alt="fans at the concert and bright pinkish-orange lights and theatrical smoke on stage"> 
+            </div>
+
+            <div class="img-container">
+            <img src="./assets/images/Photo-gallery-2.jpg" class="img"
                 alt="a concert goer with her hands in the air enjoying the music">
-            <img src="./assets/Images/Photo-gallery-3.jpg" alt="several fans with their hands raised in the air">
-            <img src="./assets/Images/Photo-gallery-4.jpg" alt="a concert goer with her right arm in the air">
-            <img src="./assets/Images/Photo-gallery-5.jpg"
+            </div>
+
+            <div class="img-container">
+            <img src="./assets/images/Photo-gallery-3.jpg" class="img" alt="several fans with their hands raised in the air">
+        </div>
+
+        <div class="img-container">
+            <img src="./assets/images/Photo-gallery-4.jpg" class="img" alt="a concert goer with her right arm in the air">
+        </div>
+
+        <div class="img-container">
+            <img src="./assets/images/Photo-gallery-5.jpg" class="img"
                 alt="bright lights and streamers descending from the ceiling">
+            </div>
 
-            <img src="./assets/Images/Photo-gallery-6.jpg" alt="lead singer Brian Teddy singing into a mic on stage">
+            <div class="img-container">
+            <img src="./assets/images/Photo-gallery-6.jpg" class="img" alt="lead singer Brian Teddy singing into a mic on stage">
+        </div>
 
-            <img src="./assets/Images/Photo-gallery-7.jpg"
+        <div class="img-container">
+            <img src="./assets/images/Photo-gallery-7.jpg" class="img"
                 alt="an image of colorful lights and confetti descending from the ceiling with concert goers in attendance and some fans holding their phones out and recording">
+            </div>
 
-            <img src="./assets/Images/Photo-gallery-8.jpg"
+            <div class="img-container">
+            <img src="./assets/images/Photo-gallery-8.jpg" class="img"
                 alt="an image of someone's hand about to play on a DJ turntable">
+            </div>
 
-            <img src="./assets/Images/Photo-gallery-9.jpg"
+            <div class="img-container">
+            <img src="./assets/images/Photo-gallery-9.jpg" class="img"
                 alt="an image of confetti in the air with fans celebrating with their hands in the air">
+            </div>
         </section>
 
     </main>
 
 
-    <footer>
+    <footer class="footer">
         <h2>Get In Touch</h2>
 
         <!-- remove the anchor styling for the icons  -->
         <a href="https://www.instagram.com" target="_blank">
-            <img src="./assets/Icons/SVG/Icon-instagram.svg" alt="instagram icon">
+            <img src="./assets/icons/icon-instagram.svg" alt="instagram icon">
         </a>
         <a href="https://www.facebook.com" target="_blank">
-            <img src="./assets/Icons/SVG/Icon-facebook.svg" alt="facebook icon">
+            <img src="./assets/icons/icon-facebook.svg" alt="facebook icon">
         </a>
         <a href="https://www.twitter.com" target="_blank">
-            <img src="./assets/Icons/SVG/Icon-twitter.svg" alt="twitter icon">
+            <img src="./assets/icons/icon-twitter.svg" alt="twitter icon">
         </a>
 
 
@@ -142,7 +174,7 @@
             <p>cwhyte@archentertainment.com</p>
         </section>
 
-        <img src="./assets/Logo/Logo-bandsite.svg" alt="bandsite logo">
+        <img src="./assets/logos/logo-bandsite.svg" alt="bandsite logo">
 
         <p>Copyright The Bees Knees © 2021 All Rights Reserved
         </p>

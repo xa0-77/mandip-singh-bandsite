@@ -12,34 +12,58 @@
 //     font-weight: bold;
 // }
 
-@mixin section-header {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: bold;
-}
+// @mixin section-header {
+//     font-size: 24px;
+//     line-height: 32px;
+//     font-weight: bold;
+// }
 
-@mixin subheader {
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 600;
-}
+// @mixin subheader {
+//     font-size: 14px;
+//     line-height: 22px;
+//     font-weight: 600;
+// }
 
-@mixin body-copy {
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: normal;
-}
+// @mixin body-or-footer-copy {
+//     font-size: 13px;
+//     line-height: 18px;
+//     font-weight: normal;
+// }
+
+// @mixin labels-or-buttons {
+//     font-size: 10px;
+//     line-height: 20px;
+//     font-weight: bold;
+// }
 
 // add mixins for media queries
 
-@mixin tablet {
-    @media (min-width: $tablet-width) {
-        @content;
-    }
-}
+// @mixin mobile-from-400px {
+//     @media (min-width: 400px) and (max-width: 767px) {
+//         @content;
+//     }
+// }
 
-@mixin desktop {
-    @media (min-width: $desktop-width) {
-        @content;
+// @mixin tablet {
+//     @media (min-width: $tablet-width) {
+//         @content;
+//     }
+// }
+
+// @mixin desktop {
+//     @media (min-width: $desktop-width) {
+//         @content;
+//     }
+// }
+
+@mixin tablet {
+    @media screen and (min-width: $tablet-breakpoint) {
+      @content;
     }
-}
+  }
+  
+  @mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+      @content;
+    }
+  }

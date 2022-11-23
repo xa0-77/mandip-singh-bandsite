@@ -1,29 +1,76 @@
-// @use './partials/variables' as *;
-// @use './partials/mixins' as *;
-
 @use './partials/variables' as *; //the bio.scss is outside of the partials folder
 @use './partials/mixins' as *; 
 
-html {
-    // padding: 0;
-    // margin: 0;
-    // font-size: 100%;
-    
-}
-
 // use BEM and nesting
 
+// @media screen and (max-width:767px) {
+
 body {
-    font: 100% $font-stack;
-    color: $primary-color-1;
-    // padding: 0;
+    padding: 0;
     margin: 0;
+    font: 100% $font-stack;
 }
 
-.header
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color-1;
+    & nav {
+        text-align: center;
+        // padding-bottom: 16px;
+        display: flex;
+    }
+    &__nav-link {
+        color: $primary-color-3;
+        text-decoration: none;
+        padding: 16px;
+        margin: 0 auto;
+        width: 50%;
+        // display: flex;
+        
+        // text-align: center;
+    }
 
-
-.logo {
-    min-height: 20px;
-    min-width: 120px;
 }
+
+.logo-container{
+       
+        // display: flex; 
+        margin: 0 auto;
+        padding: 16px;
+        // justify-content: center;
+    }
+
+// .img-container {
+    
+//     margin-left: 16px;
+//     margin-right: 16px;
+// }
+
+// .img {
+//     max-width: 100%;
+//     height: auto;
+// }
+
+.img {
+    &-container {
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 8px;
+    }
+    max-width: 100%;
+    height: auto;
+}
+
+.footer {
+
+ color: $primary-color-3;
+ background-color: $primary-color-1;
+    &-icons {
+        color: $primary-color-3;
+    }
+
+}
+// .footer-icons {
+// color: $primary-color-3;
+// }
