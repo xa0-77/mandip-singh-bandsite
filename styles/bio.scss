@@ -1,5 +1,5 @@
-@use './partials/variables' as *; //the bio.scss is outside of the partials folder
-@use './partials/mixins' as *;
+@use './partials/variables'as *; //the bio.scss is outside of the partials folder
+@use './partials/mixins'as *;
 // @use './partials/typography'as *;
 // @use './partials/typography' as *;
 
@@ -8,8 +8,11 @@
 body {
     padding: 0;
     margin: 0;
-    // font-family: "AvenirNext";
     font: 100% $font-stack;
+}
+
+p {
+    margin-top: 0;
 }
 
 .header {
@@ -28,16 +31,18 @@ body {
         padding: 16px;
         margin: 0 auto;
         width: 50%;
+
         &--active {
             border-bottom: 4px solid $primary-color-3;
             font-weight: bold;
-            
+
         }
 
         &--inactive {
             color: $secondary-color-2;
         }
-        &:hover{
+
+        &:hover {
             @extend .header__nav-link--active;
             color: $primary-color-3;
         }
@@ -62,17 +67,26 @@ body {
         margin: 0 auto;
         padding: 16px;
     }
+
     height: 20px;
     width: 120px;
 }
 
 .img {
     &-container {
-        padding-left: 16px;
-        padding-right: 16px;
-        padding-top: 8px;
+        padding: 16px 16px 0;
+        // padding-left: 16px;
+        // padding-right: 16px;
+        // padding-top: 16px;
+
         &--spacing {
             padding-top: 0;
+        }
+        &--gallery-1 {
+            padding-top: 0;
+        }
+        &--gallery-9 {
+            padding-bottom: 16px;
         }
     }
 
@@ -115,27 +129,30 @@ body {
 }
 
 .section-header {
-@include mobile-text-header;
-margin: 0;
-padding: 24px 16px 16px;
-color: $primary-color-1;
+    @include mobile-text-header;
+    margin: 0;
+    padding: 24px 16px 16px;
+    color: $primary-color-1;
 }
 
-.quote{
+.quote {
     &-container {
         padding-left: 16px;
-    padding-right: 16px;
-    color: $primary-color-1;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 600;
+        padding-right: 16px;
+        color: $primary-color-1;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 600;
     }
+
     &-wrapper {
         padding-top: 16px;
         margin: 0;
     }
+
     margin-top: 0;
     margin-bottom: 0;
+
     &-attribution {
         padding-top: 8px;
         margin-top: 0;
@@ -144,36 +161,122 @@ color: $primary-color-1;
     }
 }
 
-.article-container {
-    padding-left: 16px;
-    padding-right: 16px;
-}
+.article {
+    &-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 
-.article__header {
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: normal;
-    padding-top: 24px;
-    padding-bottom: 16px;
-    margin: 0;
+    &__header {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: normal;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        margin: 0;
+    }
 
-}
+    &__body {
+        @include mobile-body-footer-copy;
+        color: $primary-color-1;
 
-.article__body {
-    @include mobile-body-footer-copy;
-    color: $primary-color-1;
-}
+        &--paragraph-one {
+            margin-top: 0;
+        }
 
-.article__body--paragraph-one {
-margin-top: 0;
-}
-
-
-.footer {
-    color: $primary-color-3;
-    background-color: $primary-color-1;
-
-    &-icons {
-        color: $primary-color-3;
+        &--paragraph-two {
+            margin-bottom: 16px;
+        }
     }
 }
+
+// .article-container {
+//     padding-left: 16px;
+//     padding-right: 16px;
+// }
+
+// .article__header {
+//     font-size: 14px;
+//     line-height: 22px;
+//     font-weight: normal;
+//     padding-top: 24px;
+//     padding-bottom: 16px;
+//     margin: 0;
+
+// }
+
+// .article__body {
+//     @include mobile-body-footer-copy;
+//     color: $primary-color-1;
+// }
+
+// .article__body--paragraph-one {
+// margin-top: 0;
+// }
+
+// .article__body--paragraph-two {
+//     margin-bottom: 0;
+// }
+
+
+.photo-gallery-bg {
+    background-color: $secondary-bg-color;
+}
+
+.footer {
+    @include mobile-body-footer-copy;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: $primary-color-3;
+    background-color: $primary-color-1;
+    &-header-icon-wrapper {
+        width: max-content; //so that icons stay contained within content width of footer header
+        display: flex;
+        flex-direction: column;
+       }
+    &__header {
+       @include mobile-text-header;
+       padding-top: 24px;
+       padding-bottom: 16px;
+       margin: 0;
+       display: flex;
+    //    max-width: 50%;
+    //    display: inline;
+    //    display: inline-block;
+    }
+   
+    &-icon-wrapper {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    &__icon-link {
+        text-decoration: none;
+    }
+    &-subheader {
+        @include mobile-body-footer-copy;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 24px;
+    }
+    &__copyright {
+        margin-bottom: 0;
+        padding-bottom: 16px;
+    }
+    &-content {
+        margin-top: 0;
+        font-weight: bold;
+    }
+    &__logo {
+        margin-top: 48px;
+        margin-bottom: 16px;
+    }
+}
+
+.icon-spacing {
+    position: relative;
+    right: 15px;
+}
+
+

@@ -8,6 +8,7 @@
 @mixin mobile-text-header {
   font-size: 24px;
   line-height: 32px;
+  font-weight: bold;
   // font-family: 'AvenirNextLTPro Bold';
   // font-weight: bold;
 }
@@ -18,11 +19,11 @@
   font-weight: normal;
 }
 
-
-
-
-
-
+@mixin mobile-labels-buttons {
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: bold;
+}
 
 
 @mixin tablet {

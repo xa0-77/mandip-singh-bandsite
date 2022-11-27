@@ -58,7 +58,7 @@
                 The Cat’s Meow), Adams was confident the band could succeed even further, pushing them to sign with
                 Magenta Records. </p>
 
-            <p>
+            <p class="article__body--paragraph-two">
                 From there, the band has soared, gaining international recognition and ranking in the top 10 on the
                 Poster Charts. New fans immediately fell in love with the band’s original and organic attitude,
                 solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans
@@ -68,10 +68,10 @@
             </div>
         </article>
 
-        <section>
-            <h2>Photo Gallery</h2>
+        <section class="photo-gallery-bg">
+            <h2 class="section-header">Photo Gallery</h2>
 
-            <div class="img-container">
+            <div class="img-container img-container--gallery-1">
                 <img src="./assets/images/Photo-gallery-1.jpg" class="img"
                     alt="fans at the concert and bright pinkish-orange lights and theatrical smoke on stage">
             </div>
@@ -111,7 +111,7 @@
                     alt="an image of someone's hand about to play on a DJ turntable">
             </div>
 
-            <div class="img-container">
+            <div class="img-container img-container--gallery-9">
                 <img src="./assets/images/Photo-gallery-9.jpg" class="img"
                     alt="an image of confetti in the air with fans celebrating with their hands in the air">
             </div>
@@ -121,27 +121,33 @@
 
 
     <footer class="footer">
-        <h2>Get In Touch</h2>
+        <div class="footer-header-icon-wrapper">
+        <h2 class="footer__header">Get In Touch</h2>
 
+        <!-- use flexbox for icons -->
         <!-- remove the anchor styling for the icons  -->
-        <a href="https://www.instagram.com" target="_blank">
+        <div class="footer-icon-wrapper">
+        <a href="https://www.instagram.com" target="_blank" class="footer__icon-link">
             <img src="./assets/icons/icon-instagram.svg" alt="instagram icon">
         </a>
-        <a href="https://www.facebook.com" target="_blank">
-            <img src="./assets/icons/icon-facebook.svg" alt="facebook icon">
+        <a href="https://www.facebook.com" target="_blank" class="footer__icon-link">
+            <img src="./assets/icons/icon-facebook.svg" alt="facebook icon" class="icon-spacing">
         </a>
-        <a href="https://www.twitter.com" target="_blank">
-            <img src="./assets/icons/icon-twitter.svg" alt="twitter icon">
+        <a href="https://www.twitter.com" target="_blank" class="footer__icon-link">
+            <img src="./assets/icons/icon-twitter.svg" alt="twitter icon" class="icon-spacing">
         </a>
+    </div>
+
+</div>
 
 
         <!-- use footer copy styles  -->
 
         <!-- cam adams contact -->
         <section>
-            <h3>Cam Adams</h3>
+            <h3 class="footer-subheader">Cam Adams</h3> <!--footer-subheader-->
 
-            <p>The Bees Knees Management</p><!-- label styling -->
+            <p class="footer-content">The Bees Knees Management</p><!-- label styling -->
 
             <p>503 Broadway Penthouse, <br>
                 New York, NY 10012, USA</p>
@@ -152,9 +158,9 @@
         <!-- pearl gregg contact -->
 
         <section>
-            <h3>Pearl Gregg</h3>
+            <h3 class="footer-subheader">Pearl Gregg</h3> <!--footer-subheader-->
 
-            <p>Limitless Artist Group</p><!-- label styling -->
+            <p class="footer-content">Limitless Artist Group</p><!-- label styling -->
 
             <p>Booking Agent for <br>
                 US / South America / Japan</p>
@@ -164,9 +170,9 @@
 
         <!-- carson whyte contact -->
         <section>
-            <h3>Carson Whyte</h3>
+            <h3 class="footer-subheader">Carson Whyte</h3> <!--footer-subheader-->
 
-            <p>ARCH Entertainment</p><!-- label styling -->
+            <p class="footer-content">ARCH Entertainment</p><!-- label styling -->
 
             <p>Booking Agent for <br>
                 UK / EU / AU</p>
@@ -174,11 +180,10 @@
             <p>cwhyte@archentertainment.com</p>
         </section>
 
-        <img src="./assets/logos/logo-bandsite.svg" alt="bandsite logo">
+        <img src="./assets/logos/logo-bandsite.svg" alt="bandsite logo" class="footer__logo">
 
-        <p>Copyright The Bees Knees © 2021 All Rights Reserved
+        <p class="footer__copyright">Copyright The Bees Knees © 2021 All Rights Reserved
         </p>
-        <!--remove bottom margin for this copyright p tag-->
     </footer>
 
 </body>
