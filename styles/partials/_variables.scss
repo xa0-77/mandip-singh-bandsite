@@ -1,11 +1,16 @@
 // @use './typography' as *;
 //  @use 'typography' as *;
 
-// @use 'typography';
-
+// @use './typography' as *; 
 @use './typography' as *;
 
-$font-stack: AvenirNextLTPro, sans-serif; 
+ 
+$font-stack: 'Avenir Next', sans-serif;
+// $font-stack: 'AvenirNext';
+// $font-stack: sans-serif;
+
+
+
 
 // add the color variables
 $primary-color-1: #323232; //bandsite-black
@@ -15,6 +20,8 @@ $primary-color-3: #FFF; //white
 $secondary-color-1: #000; //BandSite-DarkBlack
 $secondary-color-2: #E1E1E1; //mercury
 $secondary-bg-color: #FAFAFA; //Alabaster
+
+
 // add breakpoint variables 
 
 $tablet-width: 768px;

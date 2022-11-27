@@ -1,11 +1,14 @@
-@use './partials/variables'as *; //the bio.scss is outside of the partials folder
-@use './partials/mixins'as *;
+@use './partials/variables' as *; //the bio.scss is outside of the partials folder
+@use './partials/mixins' as *;
+// @use './partials/typography'as *;
+// @use './partials/typography' as *;
 
 // use BEM and nesting
 
 body {
     padding: 0;
     margin: 0;
+    // font-family: "AvenirNext";
     font: 100% $font-stack;
 }
 
@@ -44,9 +47,23 @@ body {
 
 }
 
-.logo-container {
-    margin: 0 auto;
-    padding: 16px;
+// .logo-container {
+//     margin: 0 auto;
+//     padding: 16px;
+// }
+
+// .logo {
+//     height: 20px;
+//     width: 120px;
+// }
+
+.logo {
+    &-container {
+        margin: 0 auto;
+        padding: 16px;
+    }
+    height: 20px;
+    width: 120px;
 }
 
 .img {
@@ -54,6 +71,9 @@ body {
         padding-left: 16px;
         padding-right: 16px;
         padding-top: 8px;
+        &--spacing {
+            padding-top: 0;
+        }
     }
 
     max-width: 100%;
@@ -76,9 +96,10 @@ body {
     }
 
     &__text {
-        font-size: 24px;
-        line-height: 32px;
-        font-weight: bold;
+        // font-size: 24px;
+        // line-height: 32px;
+        // font-weight: bold;
+        @include mobile-text-header;
         color: $primary-color-3;
         padding-left: 16px;
         margin: 0;
@@ -92,6 +113,61 @@ body {
         background-size: cover;
     }
 }
+
+.section-header {
+@include mobile-text-header;
+margin: 0;
+padding: 24px 16px 16px;
+color: $primary-color-1;
+}
+
+.quote{
+    &-container {
+        padding-left: 16px;
+    padding-right: 16px;
+    color: $primary-color-1;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+    }
+    &-wrapper {
+        padding-top: 16px;
+        margin: 0;
+    }
+    margin-top: 0;
+    margin-bottom: 0;
+    &-attribution {
+        padding-top: 8px;
+        margin-top: 0;
+        margin-bottom: 0;
+        word-spacing: 0.063rem;
+    }
+}
+
+.article-container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.article__header {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: normal;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    margin: 0;
+
+}
+
+.article__body {
+    @include mobile-body-footer-copy;
+    color: $primary-color-1;
+}
+
+.article__body--paragraph-one {
+margin-top: 0;
+}
+
 
 .footer {
     color: $primary-color-3;
