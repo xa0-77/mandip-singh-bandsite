@@ -65,6 +65,11 @@ p {
             @include tablet {
                 padding-left: 32px;
             }
+            &:hover {
+                @include tablet {
+                    margin-left: 32px;
+                }
+            }
         }
 
         &:hover {
