@@ -1,17 +1,8 @@
-// @use './typography' as *;
-//  @use 'typography' as *;
-
-// @use './typography' as *; 
 @use './typography' as *;
 
- 
 $font-stack: 'Avenir Next', sans-serif;
 
-
-
-
-
-// add the color variables
+//the color variables
 $primary-color-1: #323232; //bandsite-black
 $primary-color-2: #AFAFAF; //silver
 $primary-color-3: #FFF; //white
@@ -20,8 +11,7 @@ $secondary-color-1: #000; //BandSite-DarkBlack
 $secondary-color-2: #E1E1E1; //mercury
 $secondary-bg-color: #FAFAFA; //Alabaster
 
-
-// add breakpoint variables 
-
+//breakpoint variables 
 $tablet-width: 768px;
 $desktop-width: 1280px; 
+

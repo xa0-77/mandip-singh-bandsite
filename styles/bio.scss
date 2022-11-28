@@ -20,9 +20,17 @@ p {
     flex-direction: column;
     background-color: $primary-color-1;
 
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+    }
+
     & nav {
         text-align: center;
         display: flex;
+       @include tablet {
+        padding-left: 24px;
+       }
     }
 
     &__nav-link {
@@ -31,15 +39,32 @@ p {
         padding: 16px;
         margin: 0 auto;
         width: 50%;
+        @include tablet {
+            display: flex;
+            // align-items: baseline;
+            align-items: center;
+
+            padding-left: 24px;
+        }
 
         &--active {
             border-bottom: 4px solid $primary-color-3;
             font-weight: bold;
+            @include tablet {
+                // width: max-content;
+                padding-left: 0;
+                padding-right: 0;
+                padding-bottom: 13px;
+            }
+           
 
         }
 
         &--inactive {
             color: $secondary-color-2;
+            @include tablet {
+                padding-left: 32px;
+            }
         }
 
         &:hover {
@@ -48,24 +73,17 @@ p {
         }
     }
 
-
-
 }
-
-// .logo-container {
-//     margin: 0 auto;
-//     padding: 16px;
-// }
-
-// .logo {
-//     height: 20px;
-//     width: 120px;
-// }
 
 .logo {
     &-container {
         margin: 0 auto;
         padding: 16px;
+@include tablet {
+    margin: 0;
+    padding: 36px;
+}
+        
     }
 
     height: 20px;
@@ -75,10 +93,7 @@ p {
 .img {
     &-container {
         padding: 16px 16px 0;
-        // padding-left: 16px;
-        // padding-right: 16px;
-        // padding-top: 16px;
-
+       
         &--spacing {
             padding-top: 0;
         }
@@ -89,7 +104,6 @@ p {
             padding-bottom: 16px;
         }
     }
-
     max-width: 100%;
     height: auto;
 }
@@ -110,18 +124,18 @@ p {
     }
 
     &__text {
-        // font-size: 24px;
-        // line-height: 32px;
-        // font-weight: bold;
         @include mobile-text-header;
         color: $primary-color-3;
         padding-left: 16px;
         margin: 0;
+        @include tablet {
+            @include tablet-page-header;
+            padding-left: 36px;
+        }
     }
 
     &__img {
         background-image: url("../assets/images/hero-bio.jpg");
-
         max-width: 100%;
         height: 67vw; //aspect ratio is 1.5:1 so I divide 1 by 1.5 to get 67%, so height is 67% of vw
         background-size: cover;
@@ -190,35 +204,6 @@ p {
     }
 }
 
-// .article-container {
-//     padding-left: 16px;
-//     padding-right: 16px;
-// }
-
-// .article__header {
-//     font-size: 14px;
-//     line-height: 22px;
-//     font-weight: normal;
-//     padding-top: 24px;
-//     padding-bottom: 16px;
-//     margin: 0;
-
-// }
-
-// .article__body {
-//     @include mobile-body-footer-copy;
-//     color: $primary-color-1;
-// }
-
-// .article__body--paragraph-one {
-// margin-top: 0;
-// }
-
-// .article__body--paragraph-two {
-//     margin-bottom: 0;
-// }
-
-
 .photo-gallery-bg {
     background-color: $secondary-bg-color;
 }
@@ -229,26 +214,22 @@ p {
     padding-right: 16px;
     color: $primary-color-3;
     background-color: $primary-color-1;
-    &-header-icon-wrapper {
-        width: max-content; //so that icons stay contained within content width of footer header
+    &-heading-icon-wrapper {
+        width: max-content; //to keep icons contained within content width of footer heading
         display: flex;
         flex-direction: column;
        }
-    &__header {
+    &__heading {
        @include mobile-text-header;
        padding-top: 24px;
        padding-bottom: 16px;
        margin: 0;
        display: flex;
-    //    max-width: 50%;
-    //    display: inline;
-    //    display: inline-block;
     }
    
     &-icon-wrapper {
         display: flex;
         justify-content: space-between;
-        
     }
     &__icon-link {
         text-decoration: none;
@@ -271,6 +252,8 @@ p {
     &__logo {
         margin-top: 48px;
         margin-bottom: 16px;
+        height: 20px;
+        width: 120px;
     }
 }
 

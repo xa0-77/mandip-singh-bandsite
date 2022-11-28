@@ -1,16 +1,12 @@
-
-@use './variables' as *;
-// add the font mixins like page header, section header, etc. 
+@use './variables'as *;
 
 // make sure to convert all px to rems
 
-
+// mobile text mixins 
 @mixin mobile-text-header {
   font-size: 24px;
   line-height: 32px;
   font-weight: bold;
-  // font-family: 'AvenirNextLTPro Bold';
-  // font-weight: bold;
 }
 
 @mixin mobile-body-footer-copy {
@@ -25,15 +21,46 @@
   font-weight: bold;
 }
 
+// desktop and tablet text mixins
+@mixin tablet-page-header {
+  font-size: 60px;
+  line-height: 68px;
+  font-weight: bold;
+}
 
+@mixin tablet-section-header {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: bold;
+}
+
+@mixin tablet-subheader {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+@mixin tablet-body-copy {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+}
+
+@mixin tablet-footer-copy {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+// media query mixins
 @mixin tablet {
-    @media screen and (min-width: $tablet-breakpoint) {
-      @content;
-    }
+  @media  screen and (min-width: $tablet-width) {
+    @content;
   }
-  
-  @mixin desktop {
-    @media screen and (min-width: $desktop-breakpoint) {
-      @content;
-    }
-  }
+}
+
+// @mixin desktop {
+//   @media screen and (min-width: $desktop-width) {
+//     @content;
+//   }
+// }
