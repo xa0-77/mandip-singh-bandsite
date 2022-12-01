@@ -26,11 +26,8 @@ p {
     }
 
     & nav {
-        // text-align: center;
-        display: flex;
-        // justify-content: space-around;
         text-align: center;
-
+        display: flex;
        @include tablet {
         padding-left: 24px;
        }
@@ -42,15 +39,6 @@ p {
         padding: 16px;
         margin: 0 auto;
         width: 50%;
-    //    position: relative;
-    //    left: 50%;
-        // padding: 16px;
-        // padding: 16px 0 16px 16px;
-        // margin-right: 16px;
-        // margin: 0 auto;
-        // text-align: center;
-        // margin: 0;
-        // width: 50%;
         @include tablet {
             display: flex;
             // align-items: baseline;
@@ -62,12 +50,6 @@ p {
         &--active {
             border-bottom: 4px solid $primary-color-3;
             font-weight: bold;
-            // margin-right: 16px;
-            // padding-left: auto;
-            // padding-bottom: 16px;
-            // margin-bottom: 16px;
-            // margin-right: auto;
-            // margin-left: auto;
             @include tablet {
                 // width: max-content;
                 padding-left: 0;
@@ -80,20 +62,10 @@ p {
 
         &--inactive {
             color: $secondary-color-2;
-           
             @include tablet {
                 padding-left: 32px;
-                // https://stackoverflow.com/questions/63473055/flex-box-moves-on-hover
-                border-bottom: 4px solid transparent;
-                padding-bottom: 13px;
             }
             &:hover {
-                font-weight: normal;
-            // @extend .header__nav-link--active;
-            // border-bottom: 4px solid $primary-color-3;
-                // color: $primary-color-3;
-                // width: min-content;
-            //   width: max-content;  
                 @include tablet {
                     margin-left: 32px;
                 }
@@ -103,7 +75,6 @@ p {
         &:hover {
             @extend .header__nav-link--active;
             color: $primary-color-3;
-            // font-weight: normal;
         }
     }
 
@@ -176,11 +147,23 @@ p {
     }
 }
 
+@include tablet {
+    .about-musicians-container {
+        padding-left: 72px;
+        padding-right: 72px;
+    }
+}
+
+
 .section-header {
     @include mobile-text-header;
     margin: 0;
     padding: 24px 16px 16px;
     color: $primary-color-1;
+    @include tablet {
+        @include tablet-section-header;
+        padding: 48px 36px 36px;
+    }
 }
 
 .quote {
@@ -191,11 +174,21 @@ p {
         font-size: 14px;
         line-height: 22px;
         font-weight: 600;
+        @include tablet {
+            @include tablet-subheader;
+            padding-top: 36px;
+            padding-bottom: 0px;
+            
+            
+        }
     }
 
     &-wrapper {
         padding-top: 16px;
         margin: 0;
+        @include tablet {
+            padding-top: 0;
+        }
     }
 
     margin-top: 0;
@@ -206,6 +199,10 @@ p {
         margin-top: 0;
         margin-bottom: 0;
         word-spacing: 0.063rem;
+        @include tablet {
+            @include tablet-subheader;
+            font-size: 16px;
+        }
     }
 }
 
@@ -222,6 +219,11 @@ p {
         padding-top: 24px;
         padding-bottom: 16px;
         margin: 0;
+        @include tablet {
+            @include tablet-subheader;
+            padding-top: 48px;
+            padding-bottom: 36px;
+        }
     }
 
     &__body {
@@ -230,10 +232,21 @@ p {
 
         &--paragraph-one {
             margin-top: 0;
+            @include tablet {
+                margin-right: 16px;
+            }
         }
 
         &--paragraph-two {
             margin-bottom: 16px;
+            @include tablet {
+                margin-left: 16px;
+            }
+        }
+
+        @include tablet {
+            @include tablet-body-copy;
+            display: flex;
         }
     }
 }
