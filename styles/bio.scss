@@ -255,6 +255,37 @@ p {
     background-color: $secondary-bg-color;
 }
 
+// tablet styles for image gallery
+@include tablet {
+    .gallery-container {
+        margin: 0 36px 36px;
+    }
+    .gallery-wrapper {
+        display: flex;
+        // margin: 0 36px;
+        // flex-direction: column;
+
+    }
+
+    .gallery-wrapper .img-container {
+        padding: 0;
+        // padding-left: 0;
+        // padding-right: 0;
+        
+        margin: 8px;
+    }
+
+    .gallery-container .img-container:first-child{
+        // padding-top: 16px;
+        margin-left: 0;
+    }
+
+    
+    
+   
+   
+}
+
 .footer {
     @include mobile-body-footer-copy;
     padding-left: 16px;
