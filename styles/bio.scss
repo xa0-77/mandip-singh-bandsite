@@ -277,7 +277,7 @@ p {
 
     .gallery-container .img-container:first-child{
         // padding-top: 16px;
-        margin-left: 0;
+        // margin-left: 0;
     }
 
     
@@ -292,10 +292,21 @@ p {
     padding-right: 16px;
     color: $primary-color-3;
     background-color: $primary-color-1;
+    @include tablet {
+        @include tablet-footer-copy;
+        padding: 48px 36px 36px;
+    }
     &-heading-icon-wrapper {
         width: max-content; //to keep icons contained within content width of footer heading
         display: flex;
         flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+            display: relative;
+            // max-width: 40%;
+            // justify-content: space-around;
+        }
        }
     &__heading {
        @include mobile-text-header;
@@ -303,22 +314,70 @@ p {
        padding-bottom: 16px;
        margin: 0;
        display: flex;
+       @include tablet {
+        @include tablet-section-header;
+        padding-top: 0;
+        padding-bottom: 36px;
+        margin-right: 24px;
+       }
     }
    
     &-icon-wrapper {
         display: flex;
         justify-content: space-between;
+        @include tablet {
+            position: absolute;
+            // bottom: 4%;
+            left: 33.5%;
+            padding-bottom: 36px;
+
+        }
     }
     &__icon-link {
         text-decoration: none;
+        @include tablet {
+            margin-left: 24px;
+            margin-right: 24px;
+        }
     }
-    &-subheader {
+    &-agents-container{
+        @include tablet {
+            display: flex;
+            // justify-content: space-between;
+            position: relative;
+        }
+    }
+    &__subheader {
         @include mobile-body-footer-copy;
         font-weight: bold;
         margin-top: 0;
         margin-bottom: 0;
         padding-top: 24px;
+        @include tablet {
+            @include tablet-footer-copy;
+            font-weight: bold;
+            padding-top: 0;
+        }
     }
+
+    &-agent-america {
+        @include tablet {
+            position: absolute;
+            left: 32.5%;  
+            margin-left: 24px;
+            margin-right: 24px;
+    }
+}
+
+    &-agent-uk {
+        @include tablet {
+            position: absolute;
+            left: 68%;
+        }
+    }
+
+    
+  
     &__copyright {
         margin-bottom: 0;
         padding-bottom: 16px;
