@@ -59,8 +59,13 @@
   }
 }
 
-// @mixin desktop {
-//   @media screen and (min-width: $desktop-width) {
-//     @content;
-//   }
-// }
+@mixin desktop {
+  @media screen and (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin desktop-container {
+  width: 80%;
+  margin: 0 auto;
+}

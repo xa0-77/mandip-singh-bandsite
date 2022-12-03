@@ -9,13 +9,33 @@ body {
     padding: 0;
     margin: 0;
     font: 100% $font-stack;
+    // @include desktop {
+    //     width: 80%;
+    //     margin: 0 auto;
+    // }
+   
 }
+
+// main {
+//     @include desktop {
+//         // width: 80%;
+//         // margin: 0 auto;
+//         @include desktop-container;
+//     }
+// }
 
 p {
     margin-top: 0;
 }
 
 .header {
+    &-bg {
+        @include desktop {
+            background-color: $primary-color-1;
+            padding-top: 8px;
+            // padding-bottom: 24px;
+        }
+    }
     display: flex;
     flex-direction: column;
     background-color: $primary-color-1;
@@ -24,6 +44,12 @@ p {
         display: flex;
         flex-direction: row;
     }
+
+    @include desktop {
+        @include desktop-container;
+    }
+   
+   
 
     & nav {
         text-align: center;
@@ -47,6 +73,7 @@ p {
             padding-left: 24px;
         }
 
+    
         &--active {
             border-bottom: 4px solid $primary-color-3;
             font-weight: bold;
@@ -56,6 +83,8 @@ p {
                 padding-right: 0;
                 padding-bottom: 13px;
             }
+
+         
            
 
         }
@@ -88,7 +117,11 @@ p {
     margin: 0;
     padding: 36px;
 }
-        
+
+@include desktop {
+    padding-left: 0;
+}
+    
     }
 
     height: 20px;
@@ -137,6 +170,9 @@ p {
             @include tablet-page-header;
             padding-left: 36px;
         }
+        @include desktop {
+            @include desktop-container;
+        }
     }
 
     &__img {
@@ -147,13 +183,43 @@ p {
     }
 }
 
-@include tablet {
-    .about-musicians-container {
+// @include tablet {
+//     .about-musicians-container {
+//         padding-left: 72px;
+//         padding-right: 72px;
+//     }
+// }
+
+
+// .about-musicians--desktop {
+//     @include desktop {
+//         @include desktop-container;
+//     }
+// }
+
+// .about-musicians-container {
+//     @include tablet {
+//         padding-left: 72px;
+//         padding-right: 72px;
+//     }
+
+// }
+
+
+
+.about-musicians {
+&--desktop {
+    @include desktop {
+        @include desktop-container;
+    }
+}
+&-container {
+    @include tablet {
         padding-left: 72px;
         padding-right: 72px;
     }
 }
-
+}
 
 .section-header {
     @include mobile-text-header;
@@ -248,11 +314,25 @@ p {
             @include tablet-body-copy;
             display: flex;
         }
+
+        @include desktop {
+            margin-bottom: 16px;
+        }
     }
 }
 
 .photo-gallery-bg {
     background-color: $secondary-bg-color;
+    @include desktop {
+        @include desktop-container;
+    }
+ &--desktop {
+    @include desktop {
+        background-color: $secondary-bg-color;
+        // background-color: yellow;
+        padding-bottom: 8px;
+    }
+ }
 }
 
 // tablet styles for image gallery
@@ -296,6 +376,16 @@ p {
         @include tablet-footer-copy;
         padding: 48px 36px 36px;
     }
+@include desktop {
+    @include desktop-container;
+  
+}
+&-container--desktop {
+    @include desktop {
+        background-color: $primary-color-1;
+        // margin: 0 auto;
+    }
+}
     &-heading-icon-wrapper {
         width: max-content; //to keep icons contained within content width of footer heading
         display: flex;
@@ -307,6 +397,9 @@ p {
             display: relative;
             // max-width: 40%;
             // justify-content: space-around;
+        }
+        @include desktop {
+            margin-left: 36px;
         }
        }
     &__heading {
@@ -347,6 +440,9 @@ p {
             // justify-content: space-between;
             position: relative;
         }
+        @include desktop {
+            margin-left: 36px;
+        }
     }
     &__subheader {
         @include mobile-body-footer-copy;
@@ -385,6 +481,9 @@ p {
         @include tablet {
             padding-bottom: 0;
         }
+        @include desktop {
+            margin-left: 36px;
+        }
     }
     &-content {
         margin-top: 0;
@@ -409,6 +508,9 @@ p {
             margin: 0;
             padding-bottom: 36px;
                 // display:contents;
+            }
+            @include desktop {
+                right: 12.7%;
             }
         }
         &--mobile {
