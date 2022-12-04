@@ -1,32 +1,11 @@
-// @use './partials/variables'as *; //the bio.scss is outside of the partials folder
-// @use './partials/mixins'as *;
-// @use './partials/typography'as *;
-// @use './partials/typography' as *;
-
-
-@import './partials/variables'; 
+@import './partials/variables';
 @import './partials/mixins';
-
-// use BEM and nesting
 
 body {
     padding: 0;
     margin: 0;
     font: 100% $font-stack;
-    // @include desktop {
-    //     width: 80%;
-    //     margin: 0 auto;
-    // }
-   
 }
-
-// main {
-//     @include desktop {
-//         // width: 80%;
-//         // margin: 0 auto;
-//         @include desktop-container;
-//     }
-// }
 
 p {
     margin-top: 0;
@@ -36,10 +15,10 @@ p {
     &-bg {
         @include desktop {
             background-color: $primary-color-1;
-            padding-top: 8px;
-            // padding-bottom: 24px;
+            padding-top: 0.5rem;
         }
     }
+
     display: flex;
     flex-direction: column;
     background-color: $primary-color-1;
@@ -52,55 +31,50 @@ p {
     @include desktop {
         @include desktop-container;
     }
-   
-   
 
     & nav {
         text-align: center;
         display: flex;
-       @include tablet {
-        padding-left: 24px;
-       }
+
+        @include tablet {
+            padding-left: 1.5rem;
+        }
     }
 
     &__nav-link {
         color: $primary-color-3;
         text-decoration: none;
-        padding: 16px;
+        padding: 1rem;
         margin: 0 auto;
         width: 50%;
+
         @include tablet {
             display: flex;
-            // align-items: baseline;
             align-items: center;
-
-            padding-left: 24px;
+            padding-left: 1.5rem;
         }
 
-    
         &--active {
-            border-bottom: 4px solid $primary-color-3;
+            border-bottom: 0.25rem solid $primary-color-3;
             font-weight: bold;
+
             @include tablet {
-                // width: max-content;
                 padding-left: 0;
                 padding-right: 0;
-                padding-bottom: 13px;
+                padding-bottom: 0.8125rem;
             }
-
-         
-           
-
         }
 
         &--inactive {
             color: $secondary-color-2;
+
             @include tablet {
-                padding-left: 32px;
+                padding-left: 2rem;
             }
+
             &:hover {
                 @include tablet {
-                    margin-left: 32px;
+                    margin-left: 2rem;
                 }
             }
         }
@@ -110,42 +84,44 @@ p {
             color: $primary-color-3;
         }
     }
-
 }
 
 .logo {
     &-container {
         margin: 0 auto;
-        padding: 16px;
-@include tablet {
-    margin: 0;
-    padding: 36px;
-}
+        padding: 1rem;
 
-@include desktop {
-    padding-left: 0;
-}
-    
+        @include tablet {
+            margin: 0;
+            padding: 2.25rem;
+        }
+
+        @include desktop {
+            padding-left: 0;
+        }
     }
 
-    height: 20px;
-    width: 120px;
+    height: 1.25rem;
+    width: 7.5rem;
 }
 
 .img {
     &-container {
-        padding: 16px 16px 0;
-       
+        padding: 1rem 1rem 0;
+
         &--spacing {
             padding-top: 0;
         }
+
         &--gallery-1 {
             padding-top: 0;
         }
+
         &--gallery-9 {
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
         }
     }
+
     max-width: 100%;
     height: auto;
 }
@@ -168,12 +144,14 @@ p {
     &__text {
         @include mobile-text-header;
         color: $primary-color-3;
-        padding-left: 16px;
+        padding-left: 1rem;
         margin: 0;
+
         @include tablet {
             @include tablet-page-header;
-            padding-left: 36px;
+            padding-left: 2.25rem;
         }
+
         @include desktop {
             @include desktop-container;
         }
@@ -187,75 +165,53 @@ p {
     }
 }
 
-// @include tablet {
-//     .about-musicians-container {
-//         padding-left: 72px;
-//         padding-right: 72px;
-//     }
-// }
-
-
-// .about-musicians--desktop {
-//     @include desktop {
-//         @include desktop-container;
-//     }
-// }
-
-// .about-musicians-container {
-//     @include tablet {
-//         padding-left: 72px;
-//         padding-right: 72px;
-//     }
-
-// }
-
-
-
 .about-musicians {
-&--desktop {
-    @include desktop {
-        @include desktop-container;
+    &-desktop {
+        @include desktop {
+            @include desktop-container;
+        }
     }
-}
-&-container {
-    @include tablet {
-        padding-left: 72px;
-        padding-right: 72px;
+
+    &-container {
+        @include tablet {
+            padding-left: 4.5rem;
+            padding-right: 4.5rem;
+        }
     }
-}
 }
 
 .section-header {
     @include mobile-text-header;
     margin: 0;
-    padding: 24px 16px 16px;
+    padding: 1.5rem 1rem 1rem;
     color: $primary-color-1;
+
     @include tablet {
         @include tablet-section-header;
-        padding: 48px 36px 36px;
+        padding: 3rem 2.25rem 2.25rem;
     }
 }
 
 .quote {
     &-container {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 1rem;
+        padding-right: 1rem;
         color: $primary-color-1;
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
         font-weight: 600;
+
         @include tablet {
             @include tablet-subheader;
-            padding-top: 36px;
-            padding-bottom: 0px;
-            
-            
+            padding-top: 2.25rem;
+            padding-bottom: 0;
         }
     }
 
     &-wrapper {
-        padding-top: 16px;
+        padding-top: 1rem;
         margin: 0;
+
         @include tablet {
             padding-top: 0;
         }
@@ -265,34 +221,36 @@ p {
     margin-bottom: 0;
 
     &-attribution {
-        padding-top: 8px;
+        padding-top: 0.5rem;
         margin-top: 0;
         margin-bottom: 0;
         word-spacing: 0.063rem;
+
         @include tablet {
             @include tablet-subheader;
-            font-size: 16px;
+            font-size: 1rem;
         }
     }
 }
 
 .article {
     &-container {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     &__header {
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
         font-weight: normal;
-        padding-top: 24px;
-        padding-bottom: 16px;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
         margin: 0;
+
         @include tablet {
             @include tablet-subheader;
-            padding-top: 48px;
-            padding-bottom: 36px;
+            padding-top: 3rem;
+            padding-bottom: 2.25rem;
         }
     }
 
@@ -302,15 +260,17 @@ p {
 
         &--paragraph-one {
             margin-top: 0;
+
             @include tablet {
-                margin-right: 16px;
+                margin-right: 1rem;
             }
         }
 
         &--paragraph-two {
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
+
             @include tablet {
-                margin-left: 16px;
+                margin-left: 1rem;
             }
         }
 
@@ -320,140 +280,157 @@ p {
         }
 
         @include desktop {
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
         }
     }
 }
 
 .photo-gallery-bg {
     background-color: $secondary-bg-color;
+
     @include desktop {
         @include desktop-container;
     }
- &--desktop {
-    @include desktop {
-        background-color: $secondary-bg-color;
-        // background-color: yellow;
-        padding-bottom: 8px;
+
+    &-desktop {
+        @include desktop {
+            background-color: $secondary-bg-color;
+            padding-bottom: 0.5rem;
+        }
     }
- }
 }
 
 // tablet styles for image gallery
-@include tablet {
-    .gallery-container {
-        margin: 0 36px 36px;
-    }
-    .gallery-wrapper {
-        display: flex;
-        // margin: 0 36px;
-        // flex-direction: column;
+// @include tablet {
+//     .gallery-container {
+//         margin: 0 2.25rem 2.25rem;
+//     }
 
-    }
+//     .gallery-wrapper {
+//         display: flex;
+//     }
 
-    .gallery-wrapper .img-container {
-        padding: 0;
-        // padding-left: 0;
-        // padding-right: 0;
-        
-        margin: 8px;
-    }
+//     .gallery-wrapper .img-container {
+//         padding: 0;
+//         margin: 0.5rem;
+//     }
+// }
 
-    .gallery-container .img-container:first-child{
-        // padding-top: 16px;
-        // margin-left: 0;
+.gallery {
+    &-container {
+        @include tablet {
+            margin: 0 2.25rem 2.25rem;
+        }
     }
 
-    
-    
-   
-   
+    &-wrapper {
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &-wrapper {
+        .img-container {
+            @include tablet {
+                padding: 0;
+                margin: 0.5rem;
+            }
+        }
+    }
 }
 
 .footer {
     @include mobile-body-footer-copy;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     color: $primary-color-3;
     background-color: $primary-color-1;
+
     @include tablet {
         @include tablet-footer-copy;
-        padding: 48px 36px 36px;
+        padding: 3rem 2.25rem 2.25rem;
     }
-@include desktop {
-    @include desktop-container;
-  
-}
-&-container--desktop {
+
     @include desktop {
-        background-color: $primary-color-1;
-        // margin: 0 auto;
+        @include desktop-container;
     }
-}
+
+    &-container-desktop {
+        @include desktop {
+            background-color: $primary-color-1;
+        }
+    }
+
     &-heading-icon-wrapper {
         width: max-content; //to keep icons contained within content width of footer heading
         display: flex;
         flex-direction: column;
-        margin-bottom: -10px;
+        margin-bottom: -0.625rem;
+
         @include tablet {
             flex-direction: row;
             align-items: center;
             display: relative;
-            // max-width: 40%;
-            // justify-content: space-around;
         }
+
         @include desktop {
-            margin-left: 36px;
+            margin-left: 2.25rem;
         }
-       }
-    &__heading {
-       @include mobile-text-header;
-       padding-top: 24px;
-       padding-bottom: 16px;
-       margin: 0;
-       display: flex;
-       @include tablet {
-        @include tablet-section-header;
-        padding-top: 0;
-        padding-bottom: 36px;
-        margin-right: 24px;
-       }
     }
-   
+
+    &__heading {
+        @include mobile-text-header;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        margin: 0;
+        display: flex;
+
+        @include tablet {
+            @include tablet-section-header;
+            padding-top: 0;
+            padding-bottom: 2.25rem;
+            margin-right: 1.5rem;
+        }
+    }
+
     &-icon-wrapper {
         display: flex;
         justify-content: space-between;
+
         @include tablet {
             position: absolute;
-            // bottom: 4%;
             left: 33.5%;
-            padding-bottom: 36px;
-
+            padding-bottom: 2.25rem;
         }
     }
+
     &__icon-link {
         text-decoration: none;
+
         @include tablet {
-            margin-left: 24px;
-            margin-right: 24px;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
         }
     }
-    &-agents-container{
+
+    &-agents-container {
         @include tablet {
             display: flex;
-            // justify-content: space-between;
             position: relative;
         }
+
         @include desktop {
-            margin-left: 36px;
+            margin-left: 2.25rem;
         }
     }
+
     &__subheader {
         @include mobile-body-footer-copy;
         font-weight: bold;
         margin-top: 0;
         margin-bottom: 0;
-        padding-top: 24px;
+        padding-top: 1.5rem;
+
         @include tablet {
             @include tablet-footer-copy;
             font-weight: bold;
@@ -464,11 +441,11 @@ p {
     &-agent-america {
         @include tablet {
             position: absolute;
-            left: 32.5%;  
-            margin-left: 24px;
-            margin-right: 24px;
+            left: 32.5%;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
     }
-}
 
     &-agent-uk {
         @include tablet {
@@ -477,47 +454,48 @@ p {
         }
     }
 
-    
-  
     &__copyright {
         margin-bottom: 0;
-        padding-bottom: 16px;
+        padding-bottom: 1rem;
+
         @include tablet {
             padding-bottom: 0;
         }
+
         @include desktop {
-            margin-left: 36px;
+            margin-left: 2.25rem;
         }
     }
+
     &-content {
         margin-top: 0;
         font-weight: bold;
     }
+
     &__logo {
-        margin-top: 48px;
-        margin-bottom: 16px;
-        height: 20px;
-        width: 120px;
-        &--tablet {
-            // display: absolute;
-            // left: 50%;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        height: 1.25rem;
+        width: 7.5rem;
+
+        &-tablet {
             visibility: hidden;
             margin: 0;
+
             @include tablet {
                 visibility: visible;
-                // display: contents;
                 position: absolute;
-            // left: 80%;
-            right: 5%;
-            margin: 0;
-            padding-bottom: 36px;
-                // display:contents;
+                right: 5%;
+                margin: 0;
+                padding-bottom: 2.25rem;
             }
+
             @include desktop {
                 right: 12.7%;
             }
         }
-        &--mobile {
+
+        &-mobile {
             @include tablet {
                 visibility: hidden;
                 margin: 0;
@@ -528,7 +506,5 @@ p {
 
 .icon-spacing {
     position: relative;
-    right: 15px;
+    right: 0.9375rem;
 }
-
-
