@@ -76,6 +76,8 @@ p {
                 @include tablet {
                     margin-left: 2rem;
                 }
+
+                transition: border-bottom 0.2s;
             }
         }
 
@@ -127,6 +129,7 @@ p {
 }
 
 /* hero code taken from https://stackoverflow.com/questions/47155757/text-without-opacity-within-a-container-with-opacity */
+
 .hero {
     &-container {
         position: relative;
@@ -300,22 +303,6 @@ p {
     }
 }
 
-// tablet styles for image gallery
-// @include tablet {
-//     .gallery-container {
-//         margin: 0 2.25rem 2.25rem;
-//     }
-
-//     .gallery-wrapper {
-//         display: flex;
-//     }
-
-//     .gallery-wrapper .img-container {
-//         padding: 0;
-//         margin: 0.5rem;
-//     }
-// }
-
 .gallery {
     &-container {
         @include tablet {
@@ -327,15 +314,23 @@ p {
         @include tablet {
             display: flex;
         }
-    }
 
-    &-wrapper {
-        .img-container {
-            @include tablet {
-                padding: 0;
-                margin: 0.5rem;
+        .img {
+            &-container {
+                @include tablet {
+                    padding: 0;
+                    margin: 0.5rem;
+                }
+            }
+
+            filter: grayscale(100%);
+
+            &:hover {
+                filter: grayscale(0%);
             }
         }
+
+
     }
 }
 
@@ -370,7 +365,6 @@ p {
         @include tablet {
             flex-direction: row;
             align-items: center;
-            display: relative;
         }
 
         @include desktop {
@@ -467,9 +461,14 @@ p {
         }
     }
 
-    &-content {
+    &__agent-title {
         margin-top: 0;
         font-weight: bold;
+    }
+
+    &__agent-email-link {
+        text-decoration: none;
+        color: $primary-color-3;
     }
 
     &__logo {
