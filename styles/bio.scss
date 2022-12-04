@@ -1,7 +1,11 @@
-@use './partials/variables'as *; //the bio.scss is outside of the partials folder
-@use './partials/mixins'as *;
+// @use './partials/variables'as *; //the bio.scss is outside of the partials folder
+// @use './partials/mixins'as *;
 // @use './partials/typography'as *;
 // @use './partials/typography' as *;
+
+
+@import './partials/variables'; 
+@import './partials/mixins';
 
 // use BEM and nesting
 
