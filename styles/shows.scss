@@ -1,0 +1,43 @@
+@import './bio.scss'; 
+
+
+.hero {
+
+    &-text-wrapper{
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: space-around;
+        // padding-top: 24px;
+        // padding-bottom: 12px;
+    }
+    &__title {
+        font-size: 14px;
+        line-height: 22px;
+        color: $primary-color-3;
+        font-weight: 600;
+        // align-self: flex-start;
+        padding-left: 16px;
+        padding-top: 16px;
+        margin-bottom: 0;
+    }
+    &__text {
+        // align-items: flex-start;
+        // position: relative;
+        // bottom: 20px;
+    }
+    &__img {
+        background-image: url("../assets/images/hero-shows.jpg");
+    }
+}
+iframe {
+    width: 95%;
+    height: 33%;
+    padding-left: 16px;
+    padding-bottom: 24px;
+    // margin: 0 16px;
+}
+// <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+//                 <a href="https://soundcloud.com/shubhneet-singh-3" title="Shubh" target="_blank" style="color: #cccccc; text-decoration: none;">Shubh</a> · 
+//                 <a href="https://soundcloud.com/shubhneet-singh-3/her" title="Her" target="_blank" style="color: #cccccc; text-decoration: none;">Her</a>
+//             </div>
+
